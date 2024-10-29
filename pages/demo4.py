@@ -21,9 +21,10 @@ chain=LLMChain(
     memory=st.session_state.memory,
 )
 st.title("李文慧 ChatOpenAI")
-if "cache" not in st.session_state:
-    st.session_state.cache = []
-for message in st.session_state.cache:
+if "cache2" not in st.session_state:
+    st.session_state.cache2 = []
+else:
+    for message in st.session_state.cache2:
         with st.chat_message(message['role']):
             st.write(message['content'])
 # 创建聊天输入框
@@ -33,8 +34,8 @@ if problem:
 #输入问题 、调用大模型回答问题 、将大模型回答的问题输出
     with st.chat_message("user"):
         st.write(problem)
-    st.session_state.cache.append({"role":"user","content":problem})
+    st.session_state.cache2.append({"role":"user","content":problem})
     result=chain.invoke({"input":problem})
     with st.chat_message("assistant"):
         st.write(result['text'])
-    st.session_state.cache.append({"role":"assistant","content":result['text']})
+    st.session_state.cache2.append({"role":"assistant","content":result['text']})
