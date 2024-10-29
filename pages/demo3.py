@@ -18,11 +18,12 @@ prompt = PromptTemplate.from_template("你的名字叫小慧，你现在要扮�
 chain = LLMChain(llm=model, prompt=prompt)
 st.title("李文慧 ChatOpenAI")
 
-if "cache" not in st.session_state:
-    st.session_state.cache = []
-for message in st.session_state.cache:
-    with st.chat_message(message['role']):
-        st.write(message["content"])
+if "cache1" not in st.session_state:
+    st.session_state.cache1 = []
+else:
+    for message in st.session_state.cache1:
+       with st.chat_message(message['role']):
+          st.write(message["content"])
 
 # 创建聊天输入框
 problem = st.chat_input("请输入你的问题")
@@ -34,12 +35,11 @@ if problem:
         st.write(problem)
         st.write("思考中...")
     # 将用户消息添加到缓存
-    st.session_state.cache.append({"role": "user", "content": problem})
+    st.session_state.cache1.append({"role": "user", "content": problem})
     # 调用大模型获取回答
     result = chain.invoke(problem)
     # 将大模型的回答添加到缓存
     with st.chat_message("assistant"):
         st.write("思考完成")
         st.write(result['text'])
-    st.session_state.cache.append({"role": "assistant", "content": result['text']})
-    print(st.session_state.cache)
+    st.session_state.cache1.append({"role": "assistant", "content": result['text']})
