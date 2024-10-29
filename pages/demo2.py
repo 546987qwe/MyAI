@@ -16,7 +16,8 @@ model = ChatOpenAI(
 # 构建缓存保存聊天记录
 if "cache" not in st.session_state:
     st.session_state.cache = []
-for message in st.session_state.cache:
+else:
+    for message in st.session_state.cache:
        with st.chat_message(message['role']):
           st.write(message["content"])
 
