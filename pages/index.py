@@ -3,6 +3,12 @@ import streamlit as st
 
 st.markdown("""
 <style>
+body {
+    background-image: url('https://img1.baidu.com/it/u=540965161,1553861445&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 .center {
     position: relative;
     top:100px;
