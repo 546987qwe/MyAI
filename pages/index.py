@@ -1,28 +1,47 @@
 import streamlit as st
-#生成首页，距离顶部50%，居中显示欢迎来到我的ai
 
+# 设置标题居中
 st.markdown("""
 <style>
-body {
-    background-image: url('https://img1.baidu.com/it/u=540965161,1553861445&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-.center {
-    position: relative;
-    top:100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.title-center {
+    text-align: center;
+    margin-bottom: 20px;
 }
 </style>
 """, unsafe_allow_html=True)
-st.markdown(
-    """
-    <div class="center">
-        <h1 style="font-size: 50px;">欢迎来到我的AI</h1>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+
+# 生成居中的标题
+st.markdown('<h1 class="title-center">欢迎来到我的AI</h1>', unsafe_allow_html=True)
+
+# 创建列
+c1, c2, c3, c4, c5 = st.columns(5)
+
+with c1:
+    st.image("images/img_1.png", use_column_width=True)
+    flag1 = st.button("初级", use_container_width=True)
+    if flag1:
+        st.switch_page("pages/demo1.py")
+
+with c2:
+    st.image("images/img_2.png", use_column_width=True)
+    flag2 = st.button("进阶1", use_container_width=True)
+    if flag2:
+        st.switch_page("pages/demo1.py")
+
+with c3:
+    st.image("images/img_3.png", use_column_width=True)
+    flag3 = st.button("进阶2", use_container_width=True)
+    if flag3:
+        st.switch_page("pages/demo1.py")
+
+with c4:
+    st.image("images/img_4.png", use_column_width=True)
+    flag4 = st.button("进阶3", use_container_width=True)
+    if flag4:
+        st.switch_page("pages/demo1.py")
+
+with c5:
+    st.image("images/img_5.png", use_column_width=True)
+    flag5 = st.button("图片", use_container_width=True)
+    if flag5:
+        st.switch_page("pages/image.py")
