@@ -14,12 +14,11 @@ pages = {
     #     st.Page("pages/demo3.py", title="加强"),
     # ],
     "全知": [
-        st.Page("pages/demo4.py", title="深化"),
+        st.Page("pages/demo4.py", title="全知"),
     ],
     "图片生成": [
         st.Page("pages/image.py", title="图片生成"),
     ],
 }
-# 使初始页面为pages/demo1.py
 pg = st.navigation(pages)
 pg.run()
