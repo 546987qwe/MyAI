@@ -32,7 +32,7 @@ padding-left: 12px;
 </style>
 """, unsafe_allow_html=True)
 st.markdown("""
-       <a href="http://yrkjk7.natappfree.cc/#/root/"> <button type="button">书籍详情展示</button></a>
+       <a href="https://book.free.svipss.top/#/root/"> <button type="button">书籍详情展示</button></a>
         <style>
         a button{
             position: absolute;
