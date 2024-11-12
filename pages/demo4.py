@@ -22,7 +22,7 @@ chain=LLMChain(
 )
 st.title("全知")
 st.markdown("""
-       <a  href="http://localhost:8080/"><button type="button" class="a">书籍详情展示</button></a>
+       <a  href="http://zq5xpg.natappfree.cc/#/"><button type="button" class="a">书籍详情展示</button></a>
         <style>
         .a {
             position: absolute;
