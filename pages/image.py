@@ -3,7 +3,7 @@ import streamlit as st
 
 st.title("AI绘画")
 st.markdown("""
-       <a  href="http://zq5xpg.natappfree.cc/#/"><button type="button" class="a">书籍详情展示</button></a>
+       <a  href="http://yrkjk7.natappfree.cc/#/"><button type="button" class="a">书籍详情展示</button></a>
         <style>
         .a {
             position: absolute;
