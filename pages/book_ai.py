@@ -26,7 +26,7 @@ else:
     for mess in st.session_state.cache:
         with st.chat_message(mess["role"]):
             st.write(mess["content"])
-db=SQLDatabase.from_uri("mysql+pymysql://books:books@1zx000ck55527.vicp.fun:44881/books")
+db=SQLDatabase.from_uri("mysql+pymysql://books:books@100uk055527.goho.co:37371/books")
 mode=ChatOpenAI(
     temperature=0.95,
     model="glm-4",
