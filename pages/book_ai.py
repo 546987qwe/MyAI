@@ -43,7 +43,7 @@ problem=st.chat_input("请输入问题：")
 if problem:
     with st.chat_message("user"):
         st.write(problem)
-    st.session_state.cache1.append({"role":"user","content":problem})
+    st.session_state.cache.append({"role":"user","content":problem})
     sql=sql_chain.invoke({"question":problem})
     if 'SELECT' in sql:
         first=sql.index("SELECT")
@@ -57,7 +57,7 @@ if problem:
                 "answer":result,})
             with st.chat_message("assistant"):
                 st.write(bean_result["text"])
-            st.session_state.cache1.append({"role":"assistant","content":bean_result["text"]})
+            st.session_state.cache.append({"role":"assistant","content":bean_result["text"]})
         except:
             bean_result = bean_chain.invoke({
                 "input": problem,
