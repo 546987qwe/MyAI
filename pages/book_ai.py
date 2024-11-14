@@ -6,7 +6,7 @@ from langchain.prompts import PromptTemplate
 
 st.title("书籍智能问答系统")
 st.markdown("""
-       <a  href="http://book.free.svipss.top/#/root/"><button type="button" class="a">书籍详情展示</button></a>
+       <a  href="http://zcddxlyi.dongtaiyuming.net/#/root/"><button type="button" class="a">书籍详情展示</button></a>
         <style>
         .a {
             position: absolute;
