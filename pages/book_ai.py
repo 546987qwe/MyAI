@@ -6,7 +6,7 @@ from langchain.prompts import PromptTemplate
 
 st.title("书籍智能问答系统")
 st.markdown("""
-       <a  href="http://zcddxlyi.dongtaiyuming.net/#/root/"><button type="button" class="a">书籍详情展示</button></a>
+       <a  href="http://120.46.14.243/#/root/"><button type="button" class="a">书籍详情展示</button></a>
         <style>
         .a {
             position: absolute;
@@ -26,7 +26,7 @@ else:
     for mess in st.session_state.cache:
         with st.chat_message(mess["role"]):
             st.write(mess["content"])
-db=SQLDatabase.from_uri("mysql+pymysql://books:books@100uk055527.goho.co:54701/books")
+db=SQLDatabase.from_uri("mysql+pymysql://books:books@120.46.14.243:3306/books")
 mode=ChatOpenAI(
     temperature=0.95,
     model="glm-4",
