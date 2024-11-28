@@ -17,7 +17,7 @@ st.markdown("""
         }
     </style>""", unsafe_allow_html=True)
 
-client = ZhipuAI(api_key="56e1ba13787686b2f729a2c7028025b6.zUNI18EwnjVc8e3D")  # 请填写您自己的APIKey
+client = ZhipuAI(api_key="520562dd4bf299783aae2ddd3f22f5ba.GB1hP6Mz427N7w9h")  # 请填写您自己的APIKey
 
 if "cache2" not in st.session_state:
     st.session_state.cache2= []
