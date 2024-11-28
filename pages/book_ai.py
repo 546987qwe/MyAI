@@ -30,7 +30,7 @@ db=SQLDatabase.from_uri("mysql+pymysql://books:books@120.46.14.243:3306/books")
 mode=ChatOpenAI(
     temperature=0.95,
     model="glm-4",
-    openai_api_key="56e1ba13787686b2f729a2c7028025b6.zUNI18EwnjVc8e3D",
+    openai_api_key="520562dd4bf299783aae2ddd3f22f5ba.GB1hP6Mz427N7w9h",
     openai_api_base="https://open.bigmodel.cn/api/paas/v4/"
 )
 sql_chain=create_sql_query_chain(llm=mode,db=db)
